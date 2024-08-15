@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.original_url.label }}<br>
+            {{ form.original_url(size=80) }}
+        </p>
+        <p>
+            {{ form.custom_id.label }}<br>
+            {{ form.custom_id(size=20) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
